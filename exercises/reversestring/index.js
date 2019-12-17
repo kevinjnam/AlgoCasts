@@ -9,9 +9,12 @@
   reverse('Greetings!') === '!sgniteerG'
   console.log(reverse('Greetings!') === '!sgniteerG');
 
-  
 function reverse(str) {
-  return str.split('').reverse().join('')
+  return str.split('').reduce((reversed, character) => character + reversed, '')
 }
+// function reverse(str) {
+//   return str.split('').reverse().join('')
+// }
+
 
 module.exports = reverse;
